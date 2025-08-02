@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Dikit Ling Eco Lodge</title>
+  <link rel="stylesheet" href="code.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+    }
+
+    .gallery-page-header {
+      text-align: center;
+      background-color: #0077cc;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .gallery-page-header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #0077cc;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-page-header">
+    <h1>📸 Our Gallery</h1>
+    <p>Discover the charm of Kibber and our eco lodge experience.</p>
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <div class="gallery-grid">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrS9wphnXr1C_jMJ3JXol1YaXoGKmbLAajP8JnYDA1_IB1LJBIEcAcjhR6tSnehBFqclqgxEzZIlXs7suFSuSrmct5XpFgAyD4Z7ZqCBIzvZOiCUDkbSfqG9jdSwax4_J6Q6czI3w=s1360-w1360-h1020-rw" alt="Kibber View 1">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npG5HQUdmFi4N1rJN6DgOiEt6LLKqxRw08qC3lcqzMka_reDyFgb3FQDwYrGkj77ARFgEnQoJXtQUxottWHaOOSRzVOKxz3smlVBc1om8RwDvx9x_CCITpVq6TozrA1Hf33wBi7EQ=s1360-w1360-h1020-rw" alt="Kibber View 2">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPqagNHBNogze6cQcw-XhivNXl8ZdBl4Z7GmATB=s1360-w1360-h1020-rw" alt="Kibber View 3">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipM6MI1jnIAoRhpZsatl8Q-XUwq-5TcVVIALg2cK=s1360-w1360-h1020-rw" alt="Kibber View 4">
+    <!-- Add more images as needed -->
+  </div>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Dikit-Ling Eco Lodge</h3>
+      <p>Kibber, Spiti Valley, Himachal Pradesh</p>
+      <p><a href="tel:+918360511307">📞 +91 8360511307</a></p>
+      <p><a href="mailto:info@dikitling.com">✉️ info@dikitling.com</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="menu.html">Menu</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dikit-Ling Eco Lodge | Designed for the heart of Spiti Valley</p>
+  </div>
+</footer>
+
+
+<div id="navbar-container"></div>
+<script src="main.js"></script>
+</body>
+</html>

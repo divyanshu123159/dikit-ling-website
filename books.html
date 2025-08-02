@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    
+<div class="booking-section">
+  <h2>Book Your Stay</h2>
+  <form id="individual-room-form">
+    <div class="room-block">
+      <h3>Valley View Rooms – ₹5500</h3>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="5500" id="room101"> Room 101</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room101"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="5500" id="room102"> Room 102</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room102"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="5500" id="room103"> Room 103</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room103"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="5500" id="room104"> Room 104</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room104"> +1 Bed (₹1800)</label>
+      </div>
+    </div>
+
+    <div class="room-block">
+      <h3>Mountain View Rooms – ₹4000</h3>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="4000" id="room105"> Room 105</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room105"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="4000" id="room106"> Room 106</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room106"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="4000" id="room107"> Room 107</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room107"> +1 Bed (₹1800)</label>
+      </div>
+      <div class="room-option">
+        <label><input type="checkbox" class="room" data-price="4000" id="room108"> Room 108</label>
+        <label><input type="checkbox" class="extra-bed" data-room="room108"> +1 Bed (₹1800)</label>
+      </div>
+    </div>
+
+    <p><strong>Total Price: ₹<span id="total-price">0</span></strong></p>
+    <button type="button" onclick="proceedToPay()">Proceed to Pay</button>
+  </form>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Dikit-Ling Eco Lodge</h3>
+      <p>Kibber, Spiti Valley, Himachal Pradesh</p>
+      <p><a href="tel:+918360511307">📞 +91 8360511307</a></p>
+      <p><a href="mailto:info@dikitling.com">✉️ info@dikitling.com</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="menu.html">Menu</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dikit-Ling Eco Lodge | Designed for the heart of Spiti Valley</p>
+  </div>
+</footer>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
