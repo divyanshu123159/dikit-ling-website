@@ -1,42 +1,54 @@
 .hyatt-navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
-  padding: 10px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  position: relative;
 }
 
-.nav-left, .nav-center, .nav-right {
-  flex: 1;
+/* Left, Center, Right Layout */
+.nav-left,
+.nav-center,
+.nav-right {
   display: flex;
   align-items: center;
 }
 
-.nav-center {
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 600;
-  color:#007298;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.3s ease;
+/* Hamburger (☰) */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
 }
 
+/* Center text */
+.nav-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #007298;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* User icon */
 .nav-right {
   justify-content: flex-end;
 }
 
-/* User Icon */
 .user-icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
   border-radius: 50%;
-  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
@@ -44,8 +56,37 @@
   transform: scale(1.1);
 }
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hyatt-navbar {
+    flex-wrap: nowrap;
+  }
 
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    flex: initial;
+  }
 
+  .nav-center {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 30px;
+  }
+
+  .user-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar-logo {
+    font-size: 14px;
+  }
+}
 #content {
   background-image: url(https://lh3.googleusercontent.com/p/AF1QipMjLPNbkpSYRfp9f-ZVxasP4A4T0htFctuz-NCD=s1360-w1360-h1020-rw);
   background-size: cover;
@@ -73,6 +114,20 @@
 #content p{
     width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #content {
+    height: auto; /* Allow section to grow naturally */
+    padding: 40px 15px;
+    font-size: 16px;
+  }
+
+  #content a {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-top: 15px;
+  }
+  
+}
 
 
 #text1 {
@@ -82,6 +137,64 @@
  
  
 }
+
+
+/* Optional: #text1 could be for section heading */
+#text1 {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #content {
+    height: 140px; /* reduced height */
+    background-size: cover; /* fills entire width */
+    background-repeat: no-repeat;
+    background-position: center center; /* center both vertically and horizontally */
+    background-color: transparent; /* remove black background */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #content h1 {
+    font-size: 22px;
+    margin: 5px 0;
+  }
+
+  #content p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+
+  #content a {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+  max-width: fit-content;
+  white-space: nowrap;
+  text-align: center;
+}
+
+
+
+}
+
+
+
 .room-card-delux{
   display: inline-block;
   width: 300px;
@@ -692,11 +805,11 @@
 .hotel-section {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #f5f5f5;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 .hotel-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -708,6 +821,27 @@
   margin-bottom: 20px;
 }
 
+@media screen {
+  .hotel-section {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f5f5;
+  padding: 20px 20px;
+}
+
+.hotel-container {
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Headings */
+.hotel-heading {
+  color: #2d4739;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+  
+}
 .hotel-activities h2,
 .hotel-why-choose h2 {
   color: #2d4739;
@@ -763,19 +897,134 @@ body {
   text-align: center;
   background: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Spiti_Valley_India.jpg') no-repeat center center/cover;
   color:#2c7fa0;
-  padding: 10px 20px 10px; /* <- This line has the bottom padding causing the space */
+  padding: 10px 10px 10px; /* <- This line has the bottom padding causing the space */
 }
 
 
 .spiti-hero h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin: -10px;
 }
 
 .spiti-hero .tagline {
   font-size: 1.2rem;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) { 
+  .spiti-hero {
+  text-align: center;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Spiti_Valley_India.jpg') no-repeat center center/cover;
+  color:#2c7fa0;
+  padding: 10px 10px 10px; /* <- This line has the bottom padding causing the space */
+}
+
+
+.spiti-hero h1 {
+  font-size: 1.5rem;
+  margin: -10px;
+}
+
+.spiti-hero .tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+}
+
+.spiti-things {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.spiti-things h2 {
+  color: #2c7fa0;
+  margin-bottom: 20px;
+}
+
+.spiti-things ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.spiti-things li {
+  margin-bottom: 10px;
+}
+
+  
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px; 
+  flex-wrap: wrap; 
+  margin: 20px 0;
+}
+
+.image-row img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .spiti-things {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.spiti-things h2 {
+  color: #2c7fa0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.spiti-things p{
+
+display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-size: 0.5rem;
+
+
+
+
+}
+
+.spiti-things ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.spiti-things li {
+  margin-bottom: 10px;
+}
+
+  
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px; 
+  flex-wrap: wrap; 
+  margin: 20px 0;
+}
+
+.image-row img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+  
+}
+
+
+
+
 
 .spiti-section {
   padding: 40px 20px;
@@ -797,22 +1046,42 @@ body {
 .spiti-section li {
   margin-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
 
-.image-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  .spiti-section {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.spiti-section h2 {
+  color: #2c7fa0;
   margin-bottom: 20px;
-  justify-content: center;
+}
+ .spiti-section p{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+font-size: 0.5rem;
+
+
+ }
+
+.spiti-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-.image-row img {
-  width: 100%;
-  max-width: 430px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-justify-content: center;
+.spiti-section li {
+  margin-bottom: 10px;
 }
+}
+
+
 
 .footer {
   background-color: #f8f9fa;
@@ -1067,98 +1336,121 @@ button {
 .view-photos-button:hover {
   background-color: #005fa3;
 }
-@media (max-width: 768px) {
-  .hero-image h1 {
-    font-size: 24px;
-  }
-
-  .room-card, .room-card-delux, .room-card-family, .room-card-budget {
-    width: 90% !important;
-    margin: auto;
-  }
-
-  .nav-center {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  .hotel-section,
-  .booking-section,
-  .overview-section {
-    padding: 20px;
-  }
-
-  .room-list {
-    flex-direction: column;
-    gap: 20px;
-  }
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
 
-  .spiti-hero h1 {
-    font-size: 24px;
-  }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-  .spiti-hero .tagline {
-    font-size: 14px;
-  }
+h1, h2, h3, h4, h5 {
+  color: #1b6d85;
+  text-align: center;
+}
 
-  .hotel-container,
-  .footer-container,
-  .rooms-header-row,
-  .image-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+}
 
-  .image-row img {
-    width: 90%;
-    margin-bottom: 15px;
-  }
+.navbar a {
+  text-decoration: none;
+  color: #1b6d85;
+  margin: 0 10px;
+}
 
-  .footer-column {
-    width: 90%;
-    margin: 10px 0;
-  }
+/* Hero Section */
+.hero {
+  background: url('hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-  .slider {
-    height: 250px;
-  }
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-  .slide {
-    object-fit: cover;
-  }
+.hero p {
+  font-size: 1.2rem;
+}
 
-  .rooms-heading-left h2 {
-    font-size: 24px;
-  }
+.hero .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1b6d85;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .rooms-heading-left p {
-    font-size: 14px;
-  }
+/* Section */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .outline-btn {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1b6d85;
+  text-align: center;
+}
 
-  .booking-section {
-    width: 100%;
-    padding: 20px;
-  }
+/* Room Cards */
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
 
-  .special-arrangement {
-    padding: 15px;
-  }
+.room-card {
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-  .book-now-button,
-  .call-now-button,
-  .view-photos-button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
+.room-card img {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.room-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.room-card .price {
+  font-weight: bold;
+  color: #1b6d85;
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
 }
